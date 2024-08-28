@@ -1,3 +1,35 @@
+/* font */
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/AvenirNext-Regular.woff') format('woff'),
+  url('/fonts/AvenirNext-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-size: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/AvenirNext-Bold.woff') format('woff'),
+  url('/fonts/AvenirNext-Bold.woff2') format('woff2');
+  font-weight:bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/AvenirNext-DemiBold.woff') format('woff'),
+  url('/fonts/AvenirNext-DemiBold.woff2') format('woff2');
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/AvenirNext-Medium.woff') format('woff'),
+  url('/fonts/AvenirNext-Medium.woff2') format('woff2');
+  font-weight:medium;
+  font-style: normal;
+}
+
+
+
 /* reset */
 *{
   padding: 0;
@@ -6,17 +38,21 @@
 
 }
 body{
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   background:white ;
   color:#191B43;
-  ;
 }
 p{
   margin-bottom: 0.8rem;
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: normal;
 }
 h1,h2,h3,h4{
+  font-size: 'Avenir Next', sans-serif;
+  font-weight: bold;
   margin-bottom: 1rem;
   line-height: 65px;
+
 }
 a{
   color: #191b43;
@@ -52,5 +88,53 @@ header ul li{
   padding: 1rem;
   font-size: 18px;
   line-height: 25px;
+}
+/* section find */
+.container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  max-width: 1300px;
+  margin:0 0;
+  padding: 1.25rem;
+  gap: 95px;
+}
+.text-content{
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 16px;
+}
+.title{
+  font-size: 45px;
+  line-height: 65px;
+  color: #2b292d;
+}
+p{
+  font-size: normal;
+  color: #2b292d;
+  margin: 20px 0;
+  line-height: 35px;
+  font-size: 18px;
+}
+.button{
+  background: #3040c4;
+  color: white;
+  border-radius: 41px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  max-width: 200px;
+  text-align: center;
+}
+.image-content{
+  grid-column: 2/-1;  
+}
+.image-content img{
+  width: 100%;  
 }
 
